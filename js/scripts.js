@@ -19,10 +19,26 @@ var convertToRomanNumerals = function(userInput) {
     } else if (singleDigit === 9) {
       return "IX";
     } else {
-      return "X";
+      return "";
     }
   }
 
+  var doubleConvert = function(userInput) {
+    var doubleDigit = parseInt(splitInput[splitInput.length -2]);
+    if (doubleDigit === 1 || doubleDigit === 2 || doubleDigit === 3 ) {
+      return "X".repeat(doubleDigit);
+    } else if (doubleDigit === 4) {
+      return "IL";
+    } else if (doubleDigit === 5) {
+      return "L";
+    } else if (doubleDigit === 6 || doubleDigit === 7 || doubleDigit === 8) {
+      return "L" + "X".repeat(doubleDigit-5);
+    } else if (doubleDigit === 9) {
+      return "XC";
+    } else {
+      return "";
+    }
+}
 // determines if input is convertable
   splitInput.forEach(function(number) {
     var numQuery = numbers.indexOf(number);
@@ -34,7 +50,7 @@ var convertToRomanNumerals = function(userInput) {
   if (!isNumber) {
     return "Your input cannot be converted. Check input";
   } else {
-    return "Your number is " + singleConvert(userInput);
+    return "Your number is " + doubleConvert(userInput) + singleConvert(userInput);
   }
 
 }
