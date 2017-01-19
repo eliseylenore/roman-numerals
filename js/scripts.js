@@ -5,17 +5,21 @@ var convertToRomanNumerals = function(userInput) {
   var splitInput = userInput.split('');
   var isNumber = true;
 
+// determines if input is convertable
   splitInput.forEach(function(number) {
     var numQuery = numbers.indexOf(number);
-    if (numQuery === -1) {
+    if (numQuery === -1 || (parseInt(userInput) >= 4000)){
       isNumber = false;
     }
   });
+  
   if (!isNumber) {
-    return "Please only enter numbers."
+    return "Your input cannot be converted. Check input";
   } else {
     return "Your number is " + userInput;
   }
+
+
 }
 
 
