@@ -44,11 +44,6 @@ var multiConvert = function(userInput) {
 }
 
 
-
-
-
-
-
 //front-end
 $(document).ready(function() {
   $("form").submit(function(event) {
@@ -58,47 +53,3 @@ $(document).ready(function() {
     $("#result").text(result);
   });
 });
-
-
-
-
-
-
-
-
-
-
-// // single
-//   var singleConvert = function(splitInput) {
-//     var singleDigit = parseInt(splitInput[splitInput.length -1]);
-//     if (singleDigit === 1 || singleDigit === 2 || singleDigit === 3 ) {
-//       return "X".repeat(singleDigit);
-//     } else if (singleDigit === 4) {
-//       return "XL";
-//     } else if (singleDigit === 5) {
-//       return "L";
-//     } else if (singleDigit === 6 || singleDigit === 7 || singleDigit === 8) {
-//       return "v" + "I".repeat(singleDigit-5);
-//     } else if (singleDigit === 9) {
-//       return "XC";
-//     } else {
-//       return "";
-//     }
-//   }
-// // double
-//   var doubleConvert = function(splitInput) {
-//     var doubleDigit = parseInt(splitInput[splitInput.length -2]);
-//     if (doubleDigit === 1 || doubleDigit === 2 || doubleDigit === 3 ) {
-//       return "X".repeat(doubleDigit);
-//     } else if (doubleDigit === 4) {
-//       return "XL";
-//     } else if (doubleDigit === 5) {
-//       return "L";
-//     } else if (doubleDigit === 6 || doubleDigit === 7 || doubleDigit === 8) {
-//       return "L" + "X".repeat(doubleDigit-5);
-//     } else if (doubleDigit === 9) {
-//       return "XC";
-//     } else {
-//       return "";
-//     }
-// }
